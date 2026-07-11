@@ -1,0 +1,9 @@
+# Copy this file to dataset.yaml and update the path and class names.
+# The path may be absolute or relative to this YAML file.
+path: /content/datasets/my-object-dataset
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: example_class

@@ -1,0 +1,55 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ultralytics/
+Ultralytics/
+.matplotlib/
+htmlcov/
+.coverage
+*.egg-info/
+build/
+dist/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights and exported models
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.torchscript
+
+# Uploaded media, datasets, generated video, and temporary output
+uploads/
+uploaded_media/
+datasets/
+training/datasets/
+runs/
+tmp/
+temp/
+*.tmp
+*.part
+outputs/*
+!outputs/.gitkeep
+sample_data/*
+!sample_data/README.md
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartvision-lite"
+version = "1.0.0"
+description = "Beginner-friendly real-time object detection with YOLO and Streamlit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Mohit Khairanar", email = "mohitkhairanar19493@gmail.com" },
+]
+dependencies = [
+  "ultralytics>=8.3.0,<9",
+  "torch>=2.3.0",
+  "opencv-python>=4.9.0",
+  "streamlit>=1.37.0",
+  "streamlit-webrtc>=0.47.9",
+  "av>=12.0.0",
+  "numpy>=1.26.0,<3",
+  "Pillow>=10.2.0",
+  "pandas>=2.2.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.2.0"]
+
+[tool.setuptools.packages.find]
+include = ["config*", "detection*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "integration: may download model weights or require optional hardware",
+]
